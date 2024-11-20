@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مرحبًا بك</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .message-box {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-box">
+        <h1>مرحبًا بك</h1>
+        <p>لقد تم اختراق هاتفك بنجاح؟</p>
+        <button onclick="alert('كيف يمكنني مساعدتك؟')">نعم</button>
+    </div>
+</body>
+</html>
+![IMG_٢٠٢٤١١١٩_١٤٣١٠٨](https://github.com/user-attachments/assets/f54f199b-1c09-4192-b897-a8b1b1885e9a)
