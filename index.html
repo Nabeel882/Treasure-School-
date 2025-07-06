@@ -1,0 +1,91 @@
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Runner – عداء البرومبت</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="background-music" loop></audio>
+    <div id="game-container">
+        <header>
+            <h1>Prompt Runner</h1>
+            <p class="subtitle">عداء البرومبت</p>
+        </header>
+
+        <main id="main-content">
+            <!-- شاشة البداية -->
+            <div id="start-screen" class="screen active">
+                <h2 id="welcome-message">مرحباً بك في مغامرة هندسة الأوامر!</h2>
+                <p class="hacker-text">> اركض عبر عوالم الذكاء الاصطناعي وحسّن مهاراتك في كتابة الأوامر.</p>
+                <div id="player-name-container">
+                    <input type="text" id="player-name" placeholder="ما اسمك؟ //" maxlength="15">
+                </div>
+                <button id="start-game-btn" class="btn btn-primary">[ ابدأ اللعبة ]</button>
+                <button id="resume-game-btn" class="btn btn-secondary" style="display: none;">[ استئناف اللعبة ]</button>
+                <button id="new-game-btn" class="btn btn-secondary" style="display: none;">ابدأ من جديد</button>
+            </div>
+
+            <!-- شاشة اختيار المستوى -->
+            <div id="level-selection-screen" class="screen">
+                <h2>[ اختر المستوى ]</h2>
+                <div id="level-buttons-container">
+                    <!-- سيتم توليد أزرار المستويات هنا -->
+                </div>
+            </div>
+
+            <!-- شاشة اللعب -->
+            <div id="game-screen" class="screen">
+                <div id="game-header">
+                    <div id="level-display">المستوى <span id="level-counter">1</span></div>
+                    <div id="score-display">النقاط: <span id="score-counter">0</span></div>
+                    <div id="timer-display">الوقت: <span id="timer-counter">--</span></div>
+                </div>
+                
+                <div id="runner-container">
+                    <img id="runner-sprite" src="runner_character.png" alt="شخصية العداء">
+                    <div id="confetti-container"></div>
+                </div>
+
+                <div id="scenario" class="box"></div>
+                <div id="challenge-container">
+                    <!-- سيتم عرض التحدي هنا -->
+                </div>
+                <div id="feedback" class="feedback-box"></div>
+                <div id="hint-box" class="feedback-box hint"></div>
+                <div class="game-buttons">
+                    <button id="hint-btn" class="btn btn-hint" title="احصل على تلميح">[ تلميح ]</button>
+                    <button id="check-answer-btn" class="btn btn-action">[ تحقق ]</button>
+                    <button id="skip-btn" class="btn btn-secondary">[ تخطي ]</button>
+                    <button id="next-level-btn" class="btn btn-primary" style="display: none;">[ اختر تحدياً آخر ]</button>
+                </div>
+                 <button id="back-to-menu-btn" class="btn btn-secondary">[ القائمة الرئيسية ]</button>
+            </div>
+        </main>
+    </div>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "canvas-confetti": "https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/+esm",
+            "./config.js": "./config.js",
+            "./gameState.js": "./gameState.js",
+            "./audio.js": "./audio.js",
+            "./levels.js": "./levels.js",
+            "./ui.js": "./ui.js",
+            "./templates.js": "./templates.js",
+            "./templates/mcq.js": "./templates/mcq.js",
+            "./templates/correction.js": "./templates/correction.js",
+            "./templates/creation.js": "./templates/creation.js",
+            "./templates/scramble.js": "./templates/scramble.js",
+            "./templates/forbid.js": "./templates/forbid.js",
+            "./vocabulary.js": "./vocabulary.js"
+        }
+    }
+    </script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
